@@ -1,0 +1,35 @@
+package adivina;
+
+public class Adivina {
+	int rdm;
+	int input;
+	
+	public Adivina(){
+		rdm = 0;
+		input = 0;
+	}
+	public Adivina(int random){
+		rdm = random;
+	}
+	
+	public boolean iguales(int aleatorio,int entrada){
+			boolean ret = false;
+			if(aleatorio==entrada)
+				ret = true;
+			return ret;
+	}
+	//si la entrada es menor que el random te retorna true sino false
+	public boolean entradaMenor(int aleatorio,int entrada){
+		boolean ret = false;
+		if(aleatorio>entrada)
+			ret = true;
+		return ret;
+	}
+	
+	public int num_rdm(){
+		return rdm;
+	}
+	/*public int num_input(){
+		return input;
+	}*/
+}

@@ -1,0 +1,34 @@
+package adivina;
+
+public class Adivina {
+	int rdm;
+	int input;
+	
+	public Adivina(){
+		rdm = 0;
+		input = 0;
+	}
+	public Adivina(int random,int entrada){
+		if(entrada<0 || entrada>100 )
+			throw new IllegalArgumentException("Parametro invalido");
+		else{
+
+			input = entrada;
+		}
+		rdm = random;
+		
+	}
+	public boolean iguales(int aleatorio,int entrada){
+			boolean ret = false;
+			if(aleatorio==entrada)
+				ret = true;
+			return ret;
+	}
+	
+	public int num_rdm(){
+		return rdm;
+	}
+	public int num_input(){
+		return input;
+	}
+}

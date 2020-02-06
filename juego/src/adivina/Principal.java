@@ -1,0 +1,35 @@
+package adivina;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		int random = (int) (Math.random()*100)+1;
+		Adivina ad = new Adivina(random);
+		
+		int i =0;
+		while(i<10){
+			Scanner reader = new Scanner(System.in);
+			System.out.println("ingrese numero:");
+			int input = reader.nextInt();
+			
+			if(!ad.verificarInput(input)){
+				throw new RuntimeException("numero invalido");
+			}
+			if(ad.iguales(random, input)){
+				System.out.println("ganador");
+				break;
+			}
+			if(ad.entradaMenor(random, input)){
+				System.out.println(input+" muy bajo");
+			}else{
+				System.out.println(input+" muy alto");
+			}
+				
+			i++;
+		}
+
+	}
+
+}

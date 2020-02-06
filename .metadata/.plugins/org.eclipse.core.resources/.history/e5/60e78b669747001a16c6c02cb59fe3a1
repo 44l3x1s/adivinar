@@ -1,0 +1,23 @@
+package adivina;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		int random = 3;//(int) (Math.random()*100)+1;
+		Scanner reader = new Scanner(System.in);
+		System.out.println("ingrese numero:");
+		int input = reader.nextInt();
+		
+		Adivina ad = new Adivina(random,input);
+		
+		System.out.println("random: "+ad.rdm);
+		System.out.println("entrada: "+ad.input);
+		
+		System.out.println(ad.entradaMenor(random, input));
+			
+
+	}
+
+}

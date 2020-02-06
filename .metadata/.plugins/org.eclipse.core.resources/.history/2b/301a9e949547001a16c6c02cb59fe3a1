@@ -1,0 +1,21 @@
+package adivina;
+
+public class Adivina {
+	int rdm;
+	int input;
+	
+	public Adivina(){
+		rdm = 0;
+		input = 0;
+	}
+	public Adivina(int random,int entrada){
+		rdm = random;
+		input = entrada;
+	}
+	public int num_rdm(){
+		return rdm;
+	}
+	public int num_input(){
+		return input;
+	}
+}

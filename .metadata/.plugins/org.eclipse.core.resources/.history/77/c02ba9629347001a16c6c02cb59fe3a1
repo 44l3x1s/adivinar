@@ -1,0 +1,11 @@
+package adivina;
+
+public class Adivina {
+	int rdm;
+	int input;
+	
+	public Adivina(){
+		rdm = (int) (Math.random())*100 +1;
+	}
+	
+}

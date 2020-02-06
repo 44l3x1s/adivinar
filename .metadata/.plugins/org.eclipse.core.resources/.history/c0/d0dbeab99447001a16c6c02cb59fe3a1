@@ -1,0 +1,19 @@
+package adivina;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		int random = (int) (Math.random()*100)+1;
+		Scanner reader = new Scanner(System.in);
+		int input = reader.nextInt();
+		
+		Adivina ad = new Adivina(random,input);
+		System.out.println("random: "+ad.rdm);
+		System.out.println("entrada: "+ad.input);
+		
+
+	}
+
+}
